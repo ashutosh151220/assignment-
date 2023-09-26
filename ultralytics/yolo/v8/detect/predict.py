@@ -346,8 +346,9 @@ def predict(cfg):
 
     #manage image file size
     cfg.imgsz = check_imgsz(cfg.imgsz, min_dim=2)  # check image size
-    #path to folder where splitted videos are 
+    #true if want to show  video while running
     cfg.show=True
+    #true is want to save video
     cfg.save=True
     #path where output videos are saved
     cfg.project="bestnano"
@@ -357,9 +358,7 @@ def predict(cfg):
     predictor = DetectionPredictor(cfg)
             
     predictor()
-            #to this point program for one video is completed
-            #appending counts of vehicle in this array
-    
+            
         
    
 
